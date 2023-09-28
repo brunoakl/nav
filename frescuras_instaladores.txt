@@ -1,0 +1,36 @@
+#Aqui ficarão funções de propósito estético e técnico para instaladores no ubuntu.
+
+#!/bin/bash
+
+-----------------------------Animação-----------------------------
+# Função para mostrar a animação de pontos
+mostrar_animacao() {
+    mensagem=$1
+    tempo_maximo=$2
+
+    # Mostra a mensagem
+    clear
+    echo -n -e "$mensagem"
+
+    # Inicializa o temporizador
+    temporizador=0
+
+    while [[ $temporizador -lt $tempo_maximo ]]; do
+        echo -n -e "."
+        sleep 0.5
+        temporizador=$((temporizador + 1))
+    done
+}
+
+
+-----------------------------Verificador de erros-----------------------------
+#Verificando erros
+update_status=$?
+if [ $update_status -ne 0 ]; then
+  echo Ocorreu um erro ao atualizar os pacotes.
+  sleep 0.5
+  echo Os processos foram mortos. Reinicie o instalador.
+  sudo pkill -9 -f "$(basename "$0")" &> /dev/null
+  sudo pkill -9 -f "apt" &> /dev/null
+  exit 1
+fi
