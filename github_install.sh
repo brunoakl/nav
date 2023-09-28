@@ -1,7 +1,18 @@
 #!/bin/bash
 
-clear && echo Atualizando pacotes
-sudo apt update &> /dev/null && sudo apt upgrade &> /dev/null
+clear && echo Atualizando pacotes.
+sudo apt update -y  && sudo apt upgrade -y
+
+#Verificando se
+update_status=$?
+if [ $update_status -ne 0 ]; then
+  echo Ocorreu um erro ao atualizar os pacotes.
+  echo Os processos foram mortos. Reinicie o instalador.
+  sudo pkill -9 -f "$(basename "$0")" &> /dev/null
+  sudo pkill -9 -f "apt" &> /dev/null
+  exit 1
+fi
+
 sleep 0.5 && echo " "
 
 echo Instalando dependências
@@ -23,6 +34,7 @@ sleep 0.5 && echo " "
 
 echo Limpando
 rm github-desktop.deb &> /dev/null
+rm wget-log*
 sleep 0.5 && echo " "
 
 echo "GitHub Desktop instalado com sucesso!"
