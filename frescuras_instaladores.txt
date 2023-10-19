@@ -24,7 +24,7 @@ mostrar_animacao() {
 
 
 -----------------------------Verificador de erros-----------------------------
-#Verificando erros
+#Verificando erros e matando processos
 update_status=$?
 if [ $update_status -ne 0 ]; then
   echo Ocorreu um erro ao atualizar os pacotes.
