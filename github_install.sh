@@ -34,7 +34,7 @@ sleep 0.5 && echo " "
 
 echo Limpando
 rm github-desktop.deb &> /dev/null
-rm wget-log*
+rm wget-log* &> /dev/null
 sleep 0.5 && echo " "
 
 echo "GitHub Desktop instalado com sucesso!"
