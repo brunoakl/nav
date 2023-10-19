@@ -52,4 +52,3 @@ mostrar_animacao "Instalando o Visual Studio Code" 5
 
 echo ""
 echo "Instalação concluída com sucesso!"
-
