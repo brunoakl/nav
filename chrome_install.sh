@@ -29,4 +29,3 @@ echo "Google Chrome instalado com sucesso!"
 # Limpando o pacote baixado
 rm google-chrome-stable_current_amd64.deb
 rm wget-log*
-
