@@ -9,4 +9,3 @@ sudo apt-get purge google-chrome-stable -y
 sudo apt-get autoremove -y
 
 echo "Google Chrome desinstalado com sucesso!"
-
