@@ -1,7 +1,7 @@
 #!/bin/bash
 
 clear && echo Atualizando pacotes.
-sudo apt update -y  && sudo apt upgrade -y
+sudo apt update -y > /dev/null  && sudo apt upgrade -y > /dev/null
 
 #Verificando se
 update_status=$?
@@ -29,11 +29,11 @@ sudo dpkg -i github-desktop.deb &> /dev/null
 sleep 0.5 && echo " "
 
 echo Procurando por dependências em falta
-sudo apt-get install -f &> /dev/null 
+sudo apt-get install -f > /dev/null 
 sleep 0.5 && echo " "
 
 echo Limpando
-rm github-desktop.deb &> /dev/null
+rm github-desktop.deb > /dev/null
 rm wget-log* &> /dev/null
 sleep 0.5 && echo " "
 
@@ -41,7 +41,7 @@ echo "GitHub Desktop instalado com sucesso!"
 read -p "Deseja abrir o GitHub Desktop agora? [s/n] " choice
 
 if [ "$choice" = "s" ]; then
-    github-desktop &
+    github-desktop & > /dev/null
 else
     exit
 fi
