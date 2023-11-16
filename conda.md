@@ -16,7 +16,7 @@ Para isso, selecione outro pela lista de interpretadores e volte pro que estava 
 
 ![list](https://i.imgur.com/BcibwCB.png)
 
-Caso o VS Code local não esteja configurado com extensões para Python, instale [Python Extension Pack by Don Jayamanne](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack). Este pacote contém extensões para identação, gerenciamento de ambientes virtuais .venv entre outras utilidades. 
+Caso o VS Code local não esteja configurado com extensões para Python, instale [Python Extension Pack by Don Jayamanne](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack). Este pacote contém extensões para indentação, gerenciamento de ambientes virtuais entre outras utilidades. 
 
 Para instalar o pacote via comando, abra a aba de pesquisa do VS Code (*CTRL+P por padrão*) e execute o comando `ext install donjayamanne.python-extension-pack`.
 
