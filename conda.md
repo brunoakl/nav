@@ -11,11 +11,14 @@ No canto inferior direito do VS Code, verifique se o interpretador é o mesmo do
 
 Ao clicar, uma lista de interpretadores disponíveis aparecerá na tela. Escolha o mais adequado para seu projeto.
 Atenção aos diretórios de cada um. Se estão em pastas `usr` ou `bin` costumam ser nativos do sistema e separados de ambientes virtuais.
-Sempre que instalar uma nova dependência, um refresh no interpretador pode ser necessário. Para isso, selecione outro pela lista de interpretadores e volte pro que estava usando após alguns segundos.
+Sempre que instalar uma nova dependência, um refresh no interpretador pode ser necessário. 
+Para isso, selecione outro pela lista de interpretadores e volte pro que estava usando após alguns segundos.
 
 ![list](https://i.imgur.com/BcibwCB.png)
 
-Caso o VS Code local não esteja configurado com extensões para Python, instale [Python Extension Pack by Don Jayamanne](vscode://donjayamanne.python-extension-pack). Este pacote contém extensões para identação, gerenciamento de ambientes virtuais .venv entre outras utilidades.
+Caso o VS Code local não esteja configurado com extensões para Python, instale [Python Extension Pack by Don Jayamanne](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack). Este pacote contém extensões para identação, gerenciamento de ambientes virtuais .venv entre outras utilidades. 
+
+Para instalar o pacote via comando, abra a aba de pesquisa do VS Code (*CTRL+P por padrão*) e execute o comando `ext install donjayamanne.python-extension-pack`.
 
 ![pack](https://i.imgur.com/nV3YFOl.png)
 
